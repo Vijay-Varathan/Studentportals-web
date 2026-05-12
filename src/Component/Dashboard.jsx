@@ -35,7 +35,7 @@ const Dashboard = () => {
   }
 
   async function axiosDemo(){
-  let res = await axios.get("http://13.201.69.20/student")
+  let res = await axios.get("https://studentportal-j1hd.onrender.com/student")
   console.log(res)
   }
   
