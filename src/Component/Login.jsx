@@ -35,7 +35,7 @@ const Login = () => {
   }
 
   try {
-    const response = await axios.post("http://13.201.69.20/login", {
+    const response = await axios.post("https://studentportal-j1hd.onrender.com/login", {
       username,
       password,
     });
