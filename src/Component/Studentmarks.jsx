@@ -141,7 +141,7 @@ const Studentmarks = () => {
   useEffect(() => {
     const fetchMarks = async () => {
       try {
-        const res = await axios.get(`http://13.201.69.20/mark/${rollno}`);
+        const res = await axios.get(`https://studentportal-j1hd.onrender.com/mark/${rollno}`);
         if (res.data) {
           const mark = res.data;
           setTamil({ marks: mark.tamil ?? "", totalMarks: 100 });
@@ -160,7 +160,7 @@ const Studentmarks = () => {
 
   const handleSave = async () => {
     try {
-      await axios.post(`http://13.201.69.20/mark/${rollno}`, {
+      await axios.post(`https://studentportal-j1hd.onrender.com/mark/${rollno}`, {
         tamil: Number(tamil.marks),
         english: Number(english.marks),
         maths: Number(maths.marks),
