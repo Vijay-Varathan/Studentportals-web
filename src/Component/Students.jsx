@@ -75,7 +75,7 @@ const Students = () => {
 
   const confirmDelete = async () => {
     try {
-      await axios.delete(`http://13.201.69.20/student/${selectedId}`);
+      await axios.delete(`https://studentportal-j1hd.onrender.com/student/${selectedId}`);
       toast.success("Student data deleted successfully");
       axiosDemo();
     } catch (error) {
@@ -122,7 +122,7 @@ const Students = () => {
       let res;
       if (formData.id > 0) {
         res = await axios.put(
-          `http://13.201.69.20/student/${formData.id}`,
+          `https://studentportal-j1hd.onrender.com/student/${formData.id}`,
           formData,
         );
         setTask((prev) =>
@@ -132,7 +132,7 @@ const Students = () => {
         clearform();
         console.log(res.data);
       } else {
-        res = await axios.post("http://13.201.69.20/student", formData);
+        res = await axios.post("https://studentportal-j1hd.onrender.com/student", formData);
         setTask((prev) => [...prev, res.data]);
         toast.success("Successfully added");
         clearform();
@@ -157,7 +157,7 @@ const Students = () => {
     });
   };
   async function axiosDemo() {
-    let res = await axios.get("http://13.201.69.20/student");
+    let res = await axios.get("https://studentportal-j1hd.onrender.com/student");
     setTask(res.data);
   }
   useEffect(() => {
