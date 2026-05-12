@@ -40,7 +40,7 @@ const Login = () => {
       password,
     });
 
-    if (response.status === 201) {
+    if (response.status === 200) {
       toast.success("Login Successful");
       navigate("/dashboard");
     }
