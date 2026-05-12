@@ -28,7 +28,7 @@ const Dashoverview = () => {
 const[task,setTask]=useState([]);
 
 async function axiosDemo(){
-  let res = await axios.get("http://13.201.69.20/mark");
+  let res = await axios.get("https://studentportal-j1hd.onrender.com/mark");
   console.log(res.data[2]);
   setTask(res.data);
   }
